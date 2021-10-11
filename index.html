@@ -18,7 +18,13 @@
         <p>Klik op pinnetje om het corresponderende geluksconcept te openen.</p>
       </div>
     </header>
-    <div id="map"></div>
+    <div id="map">
+<link rel="stylesheet" href="dist/css/jsvectormap.min.css" />
+<script src="dist/js/jsvectormap.min.js"></script>
+<script src="dist/maps/world.js"></script>
+
+<div id="map" style="width: 600px; height: 350px"></div>
+</div>
   </div>
 
   <script>
@@ -82,6 +88,17 @@
         )
       },
     })
+        @import 'jsvectormap'
+        @import 'jsvectormap/dist/maps/world'
+
+        const map = new jsVectorMap({
+        selector: '#map',
+        map: 'world',
+            })
+        var map = new jsVectorMap({
+  selector: "#map",
+  map: "world",
+});
   </script>
 </body>
 </html>
